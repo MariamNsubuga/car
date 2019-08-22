@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+{% block content%}
+
+{% for things in result%}
+
+		
+		
+	
+	
+	{% endfor %}
+<form method="POST" result.id>
+	<label for="things{{forloop.name}}">name
+	<input type="text" name="name" value="{{things.name}}" id ="" for ={{things.name}}></label>
+<label>startdate
+	<input type="date" name="startdate" value="result.startdate"></label>
+	<label>enddate
+	<input type="date" name="endate" value="result.enddate"></label>
+	<label>reason
+	<input type="text" name="reason" value="result.reason"></label>
+	<label>status
+	<input type="text" name="status" value="result.status"></label>
+	<label>destination
+	<input type="text" name="destination" value="result.destination"></label>
+	<label>pickup
+	<input type="text" name="pickup" value="result.pickup"></label>
+	
+
+</form>
+{% endblock%}
+</body>
+</html>

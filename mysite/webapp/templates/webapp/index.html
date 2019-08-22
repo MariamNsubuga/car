@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+<!--{% include 'air.html' %}-->
+{% block content %}
+{% load widget_tweaks %}
+{% load bootstrap3 %}
+{% block extra_css %}
+{{ form.media.css }}
+{% endblock %}
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOOKING FORM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body >
+    <div class="container" style="Width:50%">
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li {% if message.tags %} class="{{message.tags }}" {% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="form-group">
+            <form method="post" novalidate >
+           {% csrf_token %}
+           {{ message }}
+           {% bootstrap_form form %}
+           {% buttons %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+          {% endbuttons %}
+        </form>
+{% endblock %}
+        </div>
+    </div>
+        
+</body>
+</html>

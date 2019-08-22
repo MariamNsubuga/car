@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        
+
+        {% for field in form %}
+            <p><strong>{{ field.label }}</strong>: {{ field.value }}</p>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<html>
+<head>
+  <title>BOOKINGS </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body style="font-size: 30px">
+{% block  content %}
+<table class="table table-borderessd,table table-striped" >
+	<thead>
+		<th scope="col">NAME</th>
+		<th scope="col">START DATE</th>
+	<!--	<th>BOOKING TYPE</th>-->
+		<th scope="col">END DATE</th>
+		<th scope="col">REASON</th>
+		<th scope="col">STATUS</th>
+		<th scope="col">DESTINATION</th>
+		<th scope="col">PICKUP</th>
+	</thead>
+	{% for things in cd%}
+		
+		 <tr>
+		<td>{{ things.name}}</td>
+		<td>{{ things.startdate}}</td>
+<!--		<td>{{ things.booking_type}} </td>-->
+		<td>{{ things.enddate}}</td>
+		<td>{{ things.reason}}</td>
+		<td>{{ things.status}} </td>
+		<td>{{ things.destination}}</td>
+		<td>{{ things.pickup}}</td>
+		</tr>
+		
+	{% endfor %}
+</table>
+{% endblock %}
+</body>
+</htm>

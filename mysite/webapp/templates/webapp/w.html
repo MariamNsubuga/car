@@ -1,0 +1,56 @@
+{% block content %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" style="Width:50%">
+		 <div class="form-group">
+<form method="POST">
+	{% csrf_token %}
+<p>	<label>
+		Name
+	</label><input type="text" name="name"></p>
+	<!--
+	<p><label name="booking_type">Booking Type</label>
+                    
+                  <label> 
+                    <select name = "booking_type" id ="booking_type">
+                      <option>Onstation</option>
+                      <option>Outstation</option>
+                      
+                    </select></label></p>
+                -->
+                    <p>
+                    	<label>Startdate:</label><input type="date" name="startdate">
+                    </p>
+                    <p>
+                    	<label>End date</label><input type="date" name="enddate">
+                    </p>
+                    <p>
+                    	<label>Reason</label><input type="text" name="reason">
+                    </p>
+                    <p>
+                    	<label>Status</label><select name = "status">
+                    		<option>Booked</option>
+                    		<option>Return</option>
+                    	</select>
+                    </p>
+                    <p>
+                    	<label>Destination</label><input type="text" name="destination">
+                    </p>
+                    <p>
+                    	<label>Pickup place</label><input type="text" name="pickup">
+                    </p>
+                   <input type="submit" name="submit">
+</form>
+{% endblock %}
+</div>
+</div>
+</body>
+</html>

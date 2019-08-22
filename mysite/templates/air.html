@@ -1,0 +1,19 @@
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">CAR BOOKING</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'display' %}">BOOKINGS MADE <span class="sr-only">(current)</span></a>
+       <a class="nav-item nav-link" href="{% url 'bookings' %}">MAKE A CAR BOOKING </a>
+      <a class="nav-item nav-link" href="{% url 'display' %}">BOOKED</a>
+      <a class="nav-item nav-link" href="{% url 'today' %}">TODAY'S BOOKING</a>
+       <a class="nav-item nav-link" href="{% url 'taken' %}">TAKEN</a>
+        <a class="nav-item nav-link" href="{% url 'booking' %}">RETURNED </a>
+     <!-- <a class="nav-item nav-link disabled" href="{% url 'display' %}" tabindex="-1" aria-disabled="true">Disabled</a>-->
+    </div>
+  </div>
+</nav>
+</div>
